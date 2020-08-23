@@ -61,6 +61,10 @@ namespace ObserverPatternExample
                 trafficLight.registerObserver(car);
             }
             trafficLight.setState(true);
+            for (var i = 0; i < 5; i++)
+            {
+                trafficLight.unregisterObserver(trafficLight.observers[i]);
+            }
             #endregion
         }
     }
